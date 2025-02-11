@@ -7,13 +7,11 @@
             "Type": "EEPROM"
         },
         {
-            "Address": "0x1f",
-            "Bus": "$bus - 5",
-            "Labels": [
-                "temp2"
-            ],
             "Name": "IOB$bus - 29 % 11 NIC0_TEMP_C",
-            "Name1": "IOB$bus - 29 % 11 NIC0_TEMP_C",
+            "Units": "xyz.openbmc_project.Sensor.Value.Unit.DegreesC",
+            "MinValue": -255.0,
+            "MaxValue": 255,
+            "Timeout": 10.0,
             "PowerState": "On",
             "Thresholds": [
                 {
@@ -38,16 +36,14 @@
                     "Value": 5
                 }
             ],
-            "Type": "TMP421"
+            "Type": "ExternalSensor"
         },
         {
-            "Address": "0x1f",
-            "Bus": "$bus - 3",
-            "Labels": [
-                "temp2"
-            ],
             "Name": "IOB$bus - 29 % 11 NIC1_TEMP_C",
-            "Name1": "IOB$bus - 29 % 11 NIC1_TEMP_C",
+            "Units": "xyz.openbmc_project.Sensor.Value.Unit.DegreesC",
+            "MinValue": -255.0,
+            "MaxValue": 255,
+            "Timeout": 10.0,
             "PowerState": "On",
             "Thresholds": [
                 {
@@ -72,7 +68,25 @@
                     "Value": 5
                 }
             ],
-            "Type": "TMP421"
+            "Type": "ExternalSensor"
+        },
+        {
+            "Name": "IOB$bus - 29 % 11 NIC0_OSFP_TEMP_C",
+            "Units": "xyz.openbmc_project.Sensor.Value.Unit.DegreesC",
+            "MinValue": -255.0,
+            "MaxValue": 255,
+            "Timeout": 10.0,
+            "PowerState": "On",
+            "Type": "ExternalSensor"
+        },
+        {
+            "Name": "IOB$bus - 29 % 11 NIC1_OSFP_TEMP_C",
+            "Units": "xyz.openbmc_project.Sensor.Value.Unit.DegreesC",
+            "MinValue": -255.0,
+            "MaxValue": 255,
+            "Timeout": 10.0,
+            "PowerState": "On",
+            "Type": "ExternalSensor"
         }
     ],
     "Name": "NVIDIA GB200 IO Board $bus - 29 % 11",
