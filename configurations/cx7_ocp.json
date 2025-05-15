@@ -3,7 +3,7 @@
         {
             "Address": "$address",
             "Bus": "$bus",
-            "Name": "OCP CX7 NIC FRU $bus",
+            "Name": "OCP CX7 NIC FRU $bus % 2",
             "Type": "EEPROM"
         },
         {
@@ -12,11 +12,12 @@
             "Labels": [
                 "temp2"
             ],
-            "Name": "NIC Temp $bus",
-            "Name1": "NIC Temp $bus",
+            "Name": "NIC$bus % 2 TEMP_C",
+            "Name1": "NIC$bus % 2 TEMP_C",
             "Thresholds": [
                 {
                     "Direction": "less than",
+                    "Hysteresis": 0.1,
                     "Index": 2,
                     "Name": "lower critical",
                     "Severity": 1,
@@ -24,6 +25,7 @@
                 },
                 {
                     "Direction": "greater than",
+                    "Hysteresis": 2.1,
                     "Index": 2,
                     "Name": "upper critical",
                     "Severity": 1,
@@ -33,7 +35,7 @@
             "Type": "TMP421"
         }
     ],
-    "Name": "OCP CX7 NIC $bus",
+    "Name": "OCP CX7 NIC $bus % 2",
     "Probe": "xyz.openbmc_project.FruDevice({'BOARD_PRODUCT_NAME': 'Nvidia ConnectX-7 OCP3.0'})",
     "Type": "Board",
     "xyz.openbmc_project.Inventory.Decorator.Asset": {
