@@ -1,0 +1,33 @@
+{
+    "Exposes": [
+        {
+            "Configuration": "1",
+            "Interface": "0",
+            "Name": "SMA 0",
+            "Port": [
+                1,
+                2,
+                1,
+                1
+            ],
+            "RootHubPosition": "0",
+            "Type": "MCTPUSBDevice"
+        },
+        {
+            "Configuration": "1",
+            "Interface": "0",
+            "Name": "SMA 1",
+            "Port": [
+                1,
+                2,
+                2,
+                1
+            ],
+            "RootHubPosition": "0",
+            "Type": "MCTPUSBDevice"
+        }
+    ],
+    "Name": "SanMiguel HPM SMA",
+    "Probe": "FOUND('SanMiguel SCM')",
+    "Type": "Board"
+}
